@@ -1,13 +1,13 @@
 name: Url Health Check
 
-on:
-  push:
-    branches:
-      - master
-
 # on:
-#  schedule:
-#    - cron:  '30 5,17 * * *'
+#  push:
+#    branches:
+#      - master
+
+on:
+  schedule:
+    - cron:  '20/10 * * * *'
 
 jobs:
   simple_deployment_pipeline:
