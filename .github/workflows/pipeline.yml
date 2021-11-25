@@ -48,7 +48,7 @@ jobs:
           DEFAULT_BUMP: patch
       - uses: 8398a7/action-slack@v3
         with:
-          status: ${{ job.status }}
+          status: custom
           fields: workflow,job,commit,repo,ref,author,took
           custom_payload: |
             {
