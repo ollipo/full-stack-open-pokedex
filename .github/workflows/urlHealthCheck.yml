@@ -1,0 +1,20 @@
+name: Url Health Check
+
+on:
+  push:
+    branches:
+      - master
+
+# on:
+#  schedule:
+#    - cron:  '30 5,17 * * *'
+
+jobs:
+  simple_deployment_pipeline:
+    if: ${{ github.event_name == 'push' }}
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Check the deployed service URL
+        uses: jtalk/url-health-check-action@v2
+        with:
+          url: https://full-stack-open-poledex.herokuapp.com/
